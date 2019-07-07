@@ -1,0 +1,45 @@
+.b-burger__burger-wrapper {
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+}
+.b-burger__burger-wrapper .b-burger__hamburger {
+  background: black;
+  width: 30px;
+  height: 3px;
+  position: relative;
+  transition: background 10ms 300ms ease;
+  transform: translateY(20px);
+}
+.b-burger__burger-wrapper .b-burger__hamburger:before,
+.b-burger__burger-wrapper .b-burger__hamburger:after {
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+  position: absolute;
+  background: black;
+  width: 30px;
+  height: 3px;
+  content: "";
+}
+.b-burger__burger-wrapper .b-burger__hamburger:before {
+  top: -10px;
+}
+.b-burger__burger-wrapper .b-burger__hamburger:after {
+  top: 10px;
+}
+.b-burger__menu-trigger:checked ~ .b-burger__burger-wrapper .b-burger__hamburger {
+  background: transparent;
+}
+.b-burger__menu-trigger:checked ~ .b-burger__burger-wrapper .b-burger__hamburger:after,
+.b-burger__menu-trigger:checked ~ .b-burger__burger-wrapper .b-burger__hamburger:before {
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  top: 0;
+}
+.b-burger__menu-trigger:checked ~ .b-burger__burger-wrapper .b-burger__hamburger:before {
+  transform: rotate(45deg);
+}
+.b-burger__menu-trigger:checked ~ .b-burger__burger-wrapper .b-burger__hamburger:after {
+  transform: rotate(-45deg);
+}
+.b-burger__hidden {
+  display: none;
+}

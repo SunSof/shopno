@@ -1,2 +1,0 @@
-# shopno
-Created with CodeSandbox

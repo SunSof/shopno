@@ -1,0 +1,55 @@
+.b-hello {
+  &__h1 {
+
+    text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.24);
+    color: #505050;
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+  & {z-index: -2;
+    position: relative;
+    background-color: rgb(226, 226, 226);
+  }
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+
+  }
+  &__title-selection {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(116, 113, 113);
+    text-shadow: 2px 3px 2px rgb(173, 173, 173);
+  }
+  &__aqua {
+    background-color: rgb(181, 246, 255);
+    z-index: -1;
+    position: relative;
+    box-shadow:  10px 0px 0px rgb(181, 246, 255), -10px 0px 0px rgb(181, 246, 255);
+  }
+  &__btn-contact-us {
+    background: rgb(226, 226, 226);
+    border: 1px solid;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 90px;
+  }
+  &__glass {
+      position: absolute;
+      right: 10px;
+      bottom: -30px;
+  }
+}

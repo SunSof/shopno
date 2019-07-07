@@ -1,0 +1,28 @@
+.b-follow {
+background-color: rgb(56, 56, 56);
+padding: 20px;
+  &__h5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 18px;
+    padding-top: 80px;
+  }
+  &__h6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #888888;
+    font-family: Montserrat;
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+}
