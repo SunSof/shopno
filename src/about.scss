@@ -60,3 +60,27 @@
   top: 50%;
 }
 }
+.b-about .slik-dots {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+  position: absolute;
+  width: 41.6%;
+  height:auto;
+  padding: 0;
+  button {
+  box-sizing: content-box;
+  height: 7px;
+  width: 7px;
+  cursor: pointer;
+  background-color: rgb(27, 27, 27);
+  opacity: .4;
+  border-radius: 40%;
+  margin: 0 5px 0 5px;
+  padding: 0;
+  overflow: hidden;
+  text-indent: 100%; 
+  }
+}
