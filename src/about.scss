@@ -65,3 +65,9 @@
   width: 100%;
   height:auto;
 }
+.b-about .slick-dotted {
+  margin-bottom: 40px;
+  @media (min-width: 720px) {
+    margin-bottom: 0px;
+}
+}
