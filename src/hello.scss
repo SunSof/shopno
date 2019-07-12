@@ -1,6 +1,8 @@
 .b-hello {
+  z-index: -2;
+  position: relative;
+  background-color: rgb(226, 226, 226);
   &__h1 {
-
     text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.24);
     color: #505050;
     font-family: Montserrat;
@@ -11,10 +13,6 @@
     text-align: center;
     margin-top: 100px;
     margin-bottom: 0px;
-  }
-  & {z-index: -2;
-    position: relative;
-    background-color: rgb(226, 226, 226);
   }
   &__logo {
     display: flex;
@@ -46,6 +44,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 90px;
+    z-index: 1;
   }
   &__glass {
       position: absolute;
