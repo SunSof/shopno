@@ -60,6 +60,10 @@
   top: 50%;
 }
 }
+.b-about .slick-track{
+height: 360px;
+}
+
 .b-about .slick-dots {
   position: absolute;
   width: 100%;
@@ -67,7 +71,8 @@
 }
 .b-about .slick-dotted {
   margin-bottom: 40px;
-  @media (min-width: 720px) {
-    margin-bottom: 0px;
+  @include md {
+      margin-bottom: 0px;
+   }
 }
-}
+@import "./mixins.scss";

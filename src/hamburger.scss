@@ -10,6 +10,7 @@
   position: relative;
   transition: background 10ms 300ms ease;
   transform: translateY(20px);
+  display: block;
 }
 .b-burger__burger-wrapper .b-burger__hamburger:before,
 .b-burger__burger-wrapper .b-burger__hamburger:after {
