@@ -9,3 +9,4 @@ import "./say.scss";
 import "./contacts.scss";
 import "./follow.scss";
 import "./say-slider.scss";
+import "./mixins.scss";
