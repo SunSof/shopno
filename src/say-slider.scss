@@ -1,8 +1,4 @@
-.b-say .slick-dots {
-  position: absolute;
-  width: 41.6%;
-  height:auto;
-}
+
 .slick-dots {
   list-style: none;
   display: flex;
@@ -75,10 +71,8 @@
   right: 0px; 
   
 }
-.js-slider {
-  position: relative;
-}
 .slider-card {
+  position: relative;
   padding-left: 0;
   padding-right: 0;
 }
