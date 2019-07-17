@@ -1,5 +1,5 @@
 .b-hello {
-  z-index: -2;
+  z-index: 1;
   position: relative;
   background-color: rgb(226, 226, 226);
   &__h1 {
@@ -44,7 +44,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 90px;
-    z-index: 1;
+    z-index: 2;
   }
   &__glass {
       position: absolute;
