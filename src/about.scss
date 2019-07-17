@@ -1,3 +1,4 @@
+@import "./mixins.scss";
 .b-about {
   background-color: rgb(243, 243, 243);
   padding-bottom: 60px;
@@ -75,4 +76,4 @@ height: 360px;
       margin-bottom: 0px;
    }
 }
-@import "./mixins.scss";
+
