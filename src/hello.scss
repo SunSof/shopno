@@ -2,6 +2,7 @@
   z-index: 1;
   position: relative;
   background-color: rgb(226, 226, 226);
+  padding-bottom: 190px;
   &__h1 {
     text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.24);
     color: #505050;
@@ -11,7 +12,7 @@
     line-height: 40px;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 206px;
     margin-bottom: 0px;
   }
   &__logo {
@@ -19,8 +20,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
-
+    padding: 40px 0 0 140px;
   }
   &__title-selection {
     font-family: sans-serif;
@@ -39,16 +39,16 @@
   &__btn-contact-us {
     background: rgb(226, 226, 226);
     border: 1px solid;
-    padding: 10px 20px;
+    padding: 13px 55px;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 90px;
+    margin-top: 163px;
     z-index: 2;
   }
   &__glass {
-      position: absolute;
-      right: 10px;
-      bottom: -30px;
-  }
+    position: absolute;
+    right: 195px;
+    bottom: 72px;
+}
 }
