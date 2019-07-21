@@ -3,7 +3,7 @@
 
   &__sponsor {
   text-align: center;
-  padding: 30px;
+  padding: 100px 0 120px 0;
   position: relative;
   }
   &__all {
@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 80px;
+    padding: 130px 100px 90px;
   }
   &__p {
     font-family: Raleway;
@@ -23,12 +23,12 @@
   }
   &__btn-message {
     background: rgb(132, 244, 248);
-    padding: 10px 20px;
-    margin-top: 60px;
+    padding: 15px;
+    margin-top: 12px;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2px;
-    width: 60%;
+    width: 42%;
   }
   &__map {
     display: flex;
