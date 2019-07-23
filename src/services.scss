@@ -1,5 +1,9 @@
+@import "./mixins.scss";
 .b-services {
   background-color: rgb(246, 246, 246);
-  padding: 85px 80px 130px 80px;
-  margin-top: 46px;
+  padding: 0;
+  @include md {
+    padding: 85px 80px 130px 80px;
+    margin-top: 46px;
+  }
 }

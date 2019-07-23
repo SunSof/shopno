@@ -1,8 +1,9 @@
+@import "./mixins.scss";
 .b-say{
   .slick-dots {
   position: absolute;
   width: 41.6%;
-  height:auto;
+  height: auto;
 }
   background-color:rgb(231, 231, 231);
   padding-bottom: 215px;
@@ -44,8 +45,11 @@
     min-height: 150px;
     }
   &__card-description {
-    padding: 125px;
+    padding: 30px;
     background-color: rgb(194, 194, 194);
+    @include md {
+      padding: 125px;
+    }
   }
   &__img-avatar {
     position: absolute;
@@ -62,7 +66,10 @@
   }
   &__stars {
     position: absolute;
-    right: 45%;
+    right: 35%;
+    @include md {
+      right: 45%;
+    }
   }
 }
 .say-container {

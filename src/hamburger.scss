@@ -1,7 +1,12 @@
+@import "./mixins.scss";
 .b-burger__burger-wrapper {
   cursor: pointer;
+  width: 30px;
+  height: 35px;
+  @include md {
   width: 162px;
   height: 13px;
+  }
 }
 .b-burger__burger-wrapper .b-burger__hamburger {
   background: black;

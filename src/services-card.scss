@@ -1,11 +1,15 @@
+@import "./mixins.scss";
 .b-card {
   color: white;
-  padding: 110px;
+  padding: 50px;
   overflow: hidden;
   position: relative;
   font-family: sans-serif;
   background-image: url("img/s2.jpg");
   background-size: cover;
+  @include md {
+    padding: 110px;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -19,12 +23,41 @@
  &--bg1 {
   
   &:hover:after {
+  &__text-hov {
+      display: block;
+    }
+    &__heading-hov {
+      display: block;
+    }
     position: relative;
     cursor: pointer;
     background-color: aqua;
     z-index: 1;
     position: absolute;
-    display: block;
+  }
+  &__text-hov {
+    font-family: Raleway;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 25px;
+    line-height: 20px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    display: none;
+  }
+  &__heading-hov{
+    font-family: Merriweather;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-bottom: 25px;
+    white-space: nowrap;
+    position: absolute;
+    z-index: 1;
+    display: none;
   }
     background-image: url("img/s1.jpg");
  }
@@ -74,27 +107,5 @@
     font-family: Raleway;
     font-size: 17px;
     color: white; 
-  }
-  &__text-hov {
-    font-family: Raleway;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 18px;
-    margin-bottom: 25px;
-    line-height: 20px;
-    height: 60px;
-    overflow: hidden;
-    position: absolute;
-    z-index: 2;
-  }
-  &__heading-hov{
-    font-family: Merriweather;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 29px;
-    margin-bottom: 25px;
-    white-space: nowrap;
-    position: absolute;
-    z-index: 2;
-  }
+  }  
 }  

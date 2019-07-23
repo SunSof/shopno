@@ -1,26 +1,39 @@
+@import "./mixins.scss";
 .b-hello {
   z-index: 1;
   position: relative;
   background-color: rgb(226, 226, 226);
+  padding: 0;
+  @include md {
   padding-bottom: 190px;
+  }
   &__h1 {
     text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.24);
     color: #505050;
     font-family: Montserrat;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 700;
-    line-height: 40px;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 70px;
+    margin-bottom: 0px;
+    line-height: 45px;
+    @include md {
     margin-top: 206px;
     margin-bottom: 0px;
+    line-height: 40px;
+    font-size: 45px;
+    }
   }
   &__logo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0 0 140px;
+    padding: 10px;
+    @include md {
+      padding: 40px 0 0 140px;
+     }
   }
   &__title-selection {
     font-family: sans-serif;
@@ -43,12 +56,19 @@
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 163px;
+    margin: 140px 0 100px 0;
     z-index: 2;
+    @include md {
+      margin-top: 163px;
+    }
   }
   &__glass {
+    display: none;
+    @include md {
     position: absolute;
     right: 195px;
     bottom: 72px;
+    display: block;
+    }
 }
 }
