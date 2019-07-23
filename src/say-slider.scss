@@ -18,8 +18,6 @@
   padding: 0;
   overflow: hidden;
   text-indent: 100%;
-  @include md {
-  }
 }
 }
 .slick-slide-control00 .slick-slide-control01 {
@@ -60,13 +58,10 @@
   padding: 0;
   position: absolute;
   bottom: -78px;  
-  top: auto; 
-  left: auto;
   right: 280px;
   @include md {
     bottom: -78px;  
-    top: auto; 
-   left: auto;
+    right: 70px;
   }
   &:hover {
     background-color:rgb(149, 255, 255);
