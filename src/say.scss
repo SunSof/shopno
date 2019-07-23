@@ -2,8 +2,11 @@
 .b-say{
   .slick-dots {
   position: absolute;
-  width: 41.6%;
+  width: 88.6%;
   height: auto;
+  @include md {
+    width: 41.6%;
+  }
 }
   background-color:rgb(231, 231, 231);
   padding-bottom: 215px;
