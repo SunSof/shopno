@@ -7,6 +7,9 @@
   @include md {
     width: 41.6%;
   }
+  @include sm {
+    width: 32.6%;
+  }
 }
   background-color:rgb(231, 231, 231);
   padding-bottom: 215px;
@@ -53,6 +56,9 @@
     @include md {
       padding: 125px;
     }
+    @include sm {
+      padding: 72px;
+    }
   }
   &__img-avatar {
     position: absolute;
@@ -72,6 +78,9 @@
     right: 35%;
     @include md {
       right: 45%;
+    }
+    @include sm {
+      right: 37%;
     }
   }
 }

@@ -7,6 +7,10 @@
   width: 162px;
   height: 13px;
   }
+  @include sm {
+    width: 71px;
+    height: 35px;
+  }
 }
 .b-burger__burger-wrapper .b-burger__hamburger {
   background: black;

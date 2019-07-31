@@ -6,4 +6,7 @@
     padding: 85px 80px 130px 80px;
     margin-top: 46px;
   }
+  @include sm {
+  padding: 0px 0px 130px 0px;
+  }
 }

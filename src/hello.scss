@@ -34,6 +34,9 @@
     @include md {
       padding: 40px 0 0 140px;
      }
+    @include sm {
+      padding: 27px 0 0 21px;
+     }
   }
   &__title-selection {
     font-family: sans-serif;
@@ -61,6 +64,9 @@
     @include md {
       margin-top: 163px;
     }
+    @include sm {
+      margin: 179px 0 0 0;
+    }
   }
   &__glass {
     display: none;
@@ -69,6 +75,9 @@
     right: 195px;
     bottom: 72px;
     display: block;
+    }
+    @include sm {
+      display: none;
     }
 }
 }

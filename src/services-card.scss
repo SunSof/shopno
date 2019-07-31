@@ -10,6 +10,9 @@
   @include md {
     padding: 110px;
   }
+  @include sm {
+  padding: 50px;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -21,7 +24,7 @@
     z-index: 0;
   }
  &--bg1 {
-    
+
   // &:hover &-hov {
   //   display: block;   
   //   z-index: 2;
@@ -40,7 +43,6 @@
     &.alt {
       display: block;
       z-index: 2;
-
     }
   }
   &__text-hov {
@@ -103,7 +105,6 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
-    
   }
   &__btn {
     text-transform: uppercase;

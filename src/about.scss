@@ -5,6 +5,9 @@
   @include md {
   padding-bottom: 270px;
   }
+  @include sm {
+  padding-bottom: 220px;
+  }
 &__h2 {
   display: flex;
   flex-direction: column;
@@ -87,4 +90,11 @@ height: 360px;
       margin-bottom: 0px;
    }
 }
-
+.b-about .slick-slide {
+  @include sm {
+  height: 147%;
+  }
+  @include md {
+    height: 100%;
+ }
+}

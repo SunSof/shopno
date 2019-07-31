@@ -15,6 +15,9 @@
     @include md {
       padding: 130px 100px 90px;
     }
+    @include sm {
+    padding: 121px 0px 110px;
+    }
   }
   &__p {
     font-family: Raleway;
@@ -32,6 +35,9 @@
     width: 100%;
     @include md {
       width: 42%;
+    }
+    @include sm {
+    width: 100%;
     }
   }
   &__map {
