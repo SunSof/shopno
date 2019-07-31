@@ -32,4 +32,17 @@ $(function() {
     dots: true,
     arrows: false
   });
+
+ $(".b-hello__btn-contact-us").on('click', function(event) {
+
+    var target = $(".b-contacts__all");
+
+    if( target.length ) {
+        event.preventDefault();
+        $("html, body").stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
 });
