@@ -1,9 +1,12 @@
 {
-  "name": "parcel-sandbox",
+  "homepage": "https://sunsof.github.io/shopno/",
+  "name": "shopno",
   "version": "1.0.0",
   "description": "Simple Parcel Sandbox",
   "main": "index.html",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "parcel index.html --open",
     "build": "parcel build index.html --public-url https://sunsof.github.io/shopno/"
   },
@@ -12,6 +15,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
+    "gh-pages": "^2.1.1",
     "parcel-bundler": "^1.6.1",
     "sass": "^1.22.3"
   }
