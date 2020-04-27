@@ -117,189 +117,70 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/styles.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/hamburger.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/hello.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/about.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/services.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/services-card.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./img/s1.jpg":[["s1.66aa056f.jpg","src/img/s1.jpg"],"src/img/s1.jpg"],"./img/s2.jpg":[["s2.603aaa99.jpg","src/img/s2.jpg"],"src/img/s2.jpg"],"./img/s3.png":[["s3.953e8d52.png","src/img/s3.png"],"src/img/s3.png"],"./img/s4.jpg":[["s4.b5ba0918.jpg","src/img/s4.jpg"],"src/img/s4.jpg"],"./img/s5.jpg":[["s5.8d541205.jpg","src/img/s5.jpg"],"src/img/s5.jpg"],"./img/s6.jpg":[["s6.155ab9b5.jpg","src/img/s6.jpg"],"src/img/s6.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/team-card.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/say.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/contacts.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./img/tree.jpg":[["tree.3312766c.jpg","src/img/tree.jpg"],"src/img/tree.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/follow.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/say-slider.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./img/str.png":[["str.179c15a8.png","src/img/str.png"],"src/img/str.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/mixins.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/index.js":[function(require,module,exports) {
-"use strict";
-
-require("./styles.scss");
-
-require("./hamburger.scss");
-
-require("./hello.scss");
-
-require("./about.scss");
-
-require("./services.scss");
-
-require("./services-card.scss");
-
-require("./team-card.scss");
-
-require("./say.scss");
-
-require("./contacts.scss");
-
-require("./follow.scss");
-
-require("./say-slider.scss");
-
-require("./mixins.scss");
-
-$(function () {
-  var banner = $(".b-card--bg1-hov"); // handle click and add class
-
-  $(".js-open").on("click", function () {
-    banner.addClass("alt");
-  }); // handle click and remove class
-
-  $(".js-close").on("click", function () {
-    banner.removeClass("alt");
-  });
-  $(".js-slider").slick({
-    dots: true
-  });
-  $(".js-about-slider").slick({
-    dots: true,
-    arrows: false
-  });
-  $(".b-hello__btn-contact-us").on('click', function (event) {
-    var target = $(".b-contacts__all");
-
-    if (target.length) {
-      event.preventDefault();
-      $("html, body").stop().animate({
-        scrollTop: target.offset().top
-      }, 1000);
-    }
-  });
+})({"src/services.js":[function(require,module,exports) {
+//1. создать див для каждого контенера
+//2. добавить туда текст и кнопку
+//3. с помощью таргета узнаем на какой блок и кнопку мы нажали
+//4. если кнопка открыть или закрыть, если есть класс - убрать, если нет - добавить
+var content = document.querySelectorAll(".b-card__content");
+content.forEach(function (element) {
+  return element.append(createBlock());
 });
-},{"./styles.scss":"src/styles.scss","./hamburger.scss":"src/hamburger.scss","./hello.scss":"src/hello.scss","./about.scss":"src/about.scss","./services.scss":"src/services.scss","./services-card.scss":"src/services-card.scss","./team-card.scss":"src/team-card.scss","./say.scss":"src/say.scss","./contacts.scss":"src/contacts.scss","./follow.scss":"src/follow.scss","./say-slider.scss":"src/say-slider.scss","./mixins.scss":"src/mixins.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+function createBlock() {
+  var hiddenBlockText = {
+    title: "Designing is The CooL LOVE",
+    body: "Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal now, you’ll be one of the first candidates."
+  };
+  var div = document.createElement("div");
+  div.classList.add("b-card__hidden");
+  var h2 = document.createElement("h2");
+  h2.textContent = hiddenBlockText.title;
+  h2.classList.add("b-card__h2");
+  var h4 = document.createElement("h4");
+  h4.textContent = hiddenBlockText.body;
+  h4.classList.add("b-card__h4");
+  var buttonClose = document.createElement("button");
+  buttonClose.textContent = "Close";
+  buttonClose.classList.add("b-card__close");
+  div.classList.add("b-card-hov", "b-card__dis");
+  div.append(h2);
+  div.append(h4);
+  div.append(buttonClose);
+  return div;
+}
+
+var services = document.querySelector(".b-services");
+services.addEventListener("click", function () {
+  var target = event.target; // b-card__visible
+  // b-card__hidden
+
+  var visible = target.parentElement.classList.contains("b-card__visible");
+  var hidden = target.parentElement.classList.contains("b-card__hidden");
+  console.log(visible);
+  console.log(hidden);
+
+  if (visible) {
+    var visibleDiv = target.parentElement;
+    var hiddenDiv = visibleDiv.nextElementSibling;
+    console.log(visibleDiv);
+    console.log(hiddenDiv);
+    visibleDiv.classList.add("b-card__dis");
+    hiddenDiv.classList.remove("b-card__dis");
+  }
+
+  if (hidden) {
+    var _hiddenDiv = target.parentElement;
+    var _visibleDiv = _hiddenDiv.previousElementSibling;
+    console.log(_visibleDiv);
+    console.log(_hiddenDiv);
+
+    _hiddenDiv.classList.add("b-card__dis");
+
+    _visibleDiv.classList.remove("b-card__dis");
+  }
+});
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -502,5 +383,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
-//# sourceMappingURL=/src.a2b27638.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/services.js"], null)
+//# sourceMappingURL=/services.5c5fae53.js.map
